@@ -1,0 +1,22 @@
+{
+  "devFiles": [],
+  "ampDevFiles": [],
+  "polyfillFiles": [
+    "static/chunks/e8f1d_next_dist_build_polyfills_polyfill-nomodule.js"
+  ],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_82e1c14e._.js",
+    "static/chunks/e8f1d_next_dist_compiled_react-dom_97a7f6f6._.js",
+    "static/chunks/e8f1d_next_dist_compiled_react-server-dom-turbopack_f82cb2b9._.js",
+    "static/chunks/e8f1d_next_dist_compiled_next-devtools_index_bbdbd823.js",
+    "static/chunks/e8f1d_next_dist_compiled_17492759._.js",
+    "static/chunks/e8f1d_next_dist_client_9208a8dc._.js",
+    "static/chunks/e8f1d_next_dist_18fd43a3._.js",
+    "static/chunks/e8f1d_@swc_helpers_cjs_f48a963b._.js",
+    "static/chunks/OneDrive_Documents_deep-chess-iq-portfolio_a0ff3932._.js",
+    "static/chunks/turbopack-OneDrive_Documents_deep-chess-iq-portfolio_03887428._.js"
+  ],
+  "pages": {},
+  "ampFirstPages": []
+}
