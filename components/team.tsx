@@ -9,14 +9,16 @@ export function Team() {
   const teamMembers = [
     {
       name: "Steve",
-      role: "Lead Developer & AI Architect",
-      description: "Specializes in machine learning algorithms and chess engine optimization. Leads the development of our core AI systems.",
+      role: "Team Lead & Cloud Architect",
+      description:
+        "Led the team and deployed DeepChessIQ services to Microsoft Azure, ensuring reliable, scalable cloud infrastructure for the entire platform.",
       image: "/placeholder-user.jpg"
     },
     {
       name: "Vamsi",
-      role: "Backend Engineer & Database Architect",
-      description: "Expert in scalable backend systems and database design. Responsible for our robust data infrastructure.",
+      role: "Chess Engine & Stockfish Engineer",
+      description:
+        "Implemented and optimized the Stockfish-based analysis API, tuning performance and evaluation settings for fast, accurate chess insights.",
       image: "/placeholder-user.jpg"
     },
     {
@@ -27,26 +29,30 @@ export function Team() {
     },
     {
       name: "Harninder",
-      role: "Chess Engine Specialist",
-      description: "Deep expertise in chess algorithms and engine optimization. Ensures our chess analysis is world-class.",
+      role: "Integration & Deployment Engineer",
+      description:
+        "Owned end-to-end integration of services, wiring frontend, backend, and AI components together and deploying stable builds across environments.",
       image: "/placeholder-user.jpg"
     },
     {
       name: "Aparna",
-      role: "Data Scientist & Analytics",
-      description: "Transforms chess data into actionable insights using advanced statistical methods and machine learning.",
+      role: "AI Commentary Model Engineer",
+      description:
+        "Researched, trained, and refined the chess commentary model, focusing on natural, human-like explanations of engine lines and game plans.",
       image: "/placeholder-user.jpg"
     },
     {
       name: "Ethili",
-      role: "Quality Assurance & Testing",
-      description: "Ensures our platform meets the highest standards of reliability and performance for chess players.",
+      role: "Backend Engineer",
+      description:
+        "Built and hardened backend services, APIs, and data flows that power DeepChessIQ’s core features and telemetry.",
       image: "/placeholder-user.jpg"
     },
     {
       name: "Prince",
-      role: "DevOps & Infrastructure",
-      description: "Manages our cloud infrastructure and deployment pipelines to ensure seamless user experiences.",
+      role: "Frontend Engineer",
+      description:
+        "Implemented the frontend experience, translating designs into responsive React/Next.js pages and polishing the UI for a smooth user journey.",
       image: "/placeholder-user.jpg"
     }
   ]

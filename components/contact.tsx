@@ -1,11 +1,42 @@
 "use client"
 
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Mail, MessageCircle, Phone, MapPin } from "lucide-react"
 
 export function Contact() {
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [email, setEmail] = useState("")
+  const [subject, setSubject] = useState("General Inquiry")
+  const [message, setMessage] = useState("")
+
+  const handleSend = () => {
+    const fullName = `${firstName} ${lastName}`.trim()
+
+    const subjectLine = subject
+      ? `${subject}${fullName ? ` - from ${fullName}` : ""}`
+      : fullName
+        ? `Message from ${fullName}`
+        : "DeepChessIQ Contact Form Message"
+
+    const bodyLines = [
+      fullName && `Name: ${fullName}`,
+      email && `Email: ${email}`,
+      subject && `Subject: ${subject}`,
+      "",
+      message || "Message: (no message provided)",
+    ].filter(Boolean)
+
+    const mailtoUrl = `mailto:usernotfound51199@gmail.com?subject=${encodeURIComponent(
+      subjectLine,
+    )}&body=${encodeURIComponent(bodyLines.join("\n"))}`
+
+    window.location.href = mailtoUrl
+  }
+
   return (
     <section id="contact" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -30,7 +61,9 @@ export function Contact() {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Email Us</h3>
                   <p className="text-muted-foreground">
-                    deepchessiq@loyalistcollege.com
+                    <a href="mailto:usernotfound51199@gmail.com" className="hover:underline">
+                      usernotfound51199@gmail.com
+                    </a>
                   </p>
                   <p className="text-sm text-muted-foreground">
                     We'll respond within 24 hours
@@ -108,6 +141,8 @@ export function Contact() {
                         type="text" 
                         className="w-full mt-1 px-3 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
                         placeholder="Your first name"
+                        value={firstName}
+                        onChange={(e) => setFirstName(e.target.value)}
                       />
                     </div>
                     <div>
@@ -116,6 +151,8 @@ export function Contact() {
                         type="text" 
                         className="w-full mt-1 px-3 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
                         placeholder="Your last name"
+                        value={lastName}
+                        onChange={(e) => setLastName(e.target.value)}
                       />
                     </div>
                   </div>
@@ -126,17 +163,23 @@ export function Contact() {
                       type="email" 
                       className="w-full mt-1 px-3 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
                       placeholder="your.email@example.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
 
                   <div>
                     <label className="text-sm font-medium text-muted-foreground">Subject</label>
-                    <select className="w-full mt-1 px-3 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50">
-                      <option>General Inquiry</option>
-                      <option>Demo Request</option>
-                      <option>Technical Support</option>
-                      <option>Partnership</option>
-                      <option>Academic Collaboration</option>
+                    <select
+                      className="w-full mt-1 px-3 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                      value={subject}
+                      onChange={(e) => setSubject(e.target.value)}
+                    >
+                      <option value="General Inquiry">General Inquiry</option>
+                      <option value="Demo Request">Demo Request</option>
+                      <option value="Technical Support">Technical Support</option>
+                      <option value="Partnership">Partnership</option>
+                      <option value="Academic Collaboration">Academic Collaboration</option>
                     </select>
                   </div>
 
@@ -146,10 +189,17 @@ export function Contact() {
                       rows={4}
                       className="w-full mt-1 px-3 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
                       placeholder="Tell us about your chess intelligence needs..."
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                     />
                   </div>
 
-                  <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                  <Button
+                    type="button"
+                    size="lg"
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                    onClick={handleSend}
+                  >
                     Send Message
                   </Button>
                 </div>
