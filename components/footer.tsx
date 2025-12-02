@@ -23,7 +23,7 @@ export function Footer() {
               Transforming chess through AI innovation.
             </p>
             <p className="text-xs text-muted-foreground">
-              Loyalist College 2025 Capstone Project
+              © 2025 DeepChessIQ. All rights reserved.
             </p>
           </div>
 

@@ -43,11 +43,11 @@ export function Contact() {
               <div>
                 <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
                 <p className="text-muted-foreground">
-                  4000 Victoria Park Avenue<br />
-                  Toronto, Ontario, Canada
+                  123 Innovation Drive, Suite 500<br />
+                  Toronto, Ontario, Canada M5H 2N2
                 </p>
                 <p className="text-sm text-muted-foreground mt-1">
-                  Capstone Project 2025
+                  Open Monday - Friday, 9AM - 5PM EST
                 </p>
               </div>
             </div>
