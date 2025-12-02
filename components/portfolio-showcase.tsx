@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -14,7 +14,7 @@ export function PortfolioShowcase() {
       title: "Chess Engine Integration",
       description: "Advanced chess engine integration with Stockfish and custom evaluation algorithms",
       image: "/placeholder.jpg",
-      technologies: ["Stockfish", "C++", "WebAssembly", "Node.js"],
+      technologies: ["Stockfish", "Python", "Node.js"],
       type: "Core Engine"
     },
     {
@@ -44,13 +44,6 @@ export function PortfolioShowcase() {
       image: "/placeholder.jpg",
       technologies: ["OpenAI GPT", "WebSocket", "React", "Node.js"],
       type: "NLP"
-    },
-    {
-      title: "Mobile Chess App",
-      description: "Cross-platform mobile application for on-the-go chess training",
-      image: "/placeholder.jpg",
-      technologies: ["React Native", "Expo", "AsyncStorage", "Push Notifications"],
-      type: "Mobile"
     }
   ]
 
@@ -62,7 +55,14 @@ export function PortfolioShowcase() {
     setCurrentIndex((prev) => (prev - 1 + portfolioItems.length) % portfolioItems.length)
   }
 
-  const currentItem = portfolioItems[currentIndex]
+  // Ensure currentIndex is always valid
+  useEffect(() => {
+    if (currentIndex >= portfolioItems.length) {
+      setCurrentIndex(0)
+    }
+  }, [currentIndex, portfolioItems.length])
+
+  const currentItem = portfolioItems[currentIndex] || portfolioItems[0]
 
   return (
     <section id="portfolio" className="py-20 px-4 bg-muted/5">
@@ -105,7 +105,12 @@ export function PortfolioShowcase() {
                   <ExternalLink className="w-4 h-4 mr-2" />
                   View Demo
                 </Button>
-                <Button size="sm" variant="outline" className="glass">
+                <Button 
+                  size="sm" 
+                  variant="outline" 
+                  className="glass"
+                  onClick={() => window.open('https://github.com/AIP-F25-1/DeepChessIQ', '_blank')}
+                >
                   <Github className="w-4 h-4 mr-2" />
                   Source Code
                 </Button>

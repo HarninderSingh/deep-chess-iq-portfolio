@@ -62,7 +62,12 @@ export function Navigation() {
 
           {/* GitHub Link */}
           <div className="hidden md:block">
-            <Button variant="outline" size="sm" className="glass">
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="glass"
+              onClick={() => window.open('https://github.com/AIP-F25-1/DeepChessIQ', '_blank')}
+            >
               <Github className="w-4 h-4 mr-2" />
               GitHub
             </Button>
@@ -114,7 +119,12 @@ export function Navigation() {
                 Contact
               </button>
               <div className="px-3 py-2">
-                <Button variant="outline" size="sm" className="glass w-full">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="glass w-full"
+                  onClick={() => window.open('https://github.com/AIP-F25-1/DeepChessIQ', '_blank')}
+                >
                   <Github className="w-4 h-4 mr-2" />
                   GitHub
                 </Button>

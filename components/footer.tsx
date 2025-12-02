@@ -1,6 +1,5 @@
 "use client"
 
-import { LucideGithub, LucideLinkedin, Mail, Twitter, Facebook } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Footer() {
@@ -69,7 +68,12 @@ export function Footer() {
               <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
                 API Reference
               </a>
-              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href="https://github.com/AIP-F25-1/DeepChessIQ" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
                 GitHub Repository
               </a>
               <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -93,43 +97,12 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Social links and copyright */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-border">
-          <div className="text-center md:text-left">
+        {/* Copyright */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-8 border-t border-border">
+          <div className="text-center">
             <p className="text-sm text-muted-foreground">
               © 2025 by DeepChessIQ Team. Built with Next.js, React and RL Chess Engines.
             </p>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <button
-              type="button"
-              className="w-10 h-10 rounded-lg bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors"
-              aria-label="Facebook"
-            >
-              <Facebook className="w-5 h-5 text-primary" />
-            </button>
-            <button
-              type="button"
-              className="w-10 h-10 rounded-lg bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors"
-              aria-label="Twitter"
-            >
-              <Twitter className="w-5 h-5 text-primary" />
-            </button>
-            <button
-              type="button"
-              className="w-10 h-10 rounded-lg bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors"
-              aria-label="LinkedIn"
-            >
-              <LucideLinkedin className="w-5 h-5 text-primary" />
-            </button>
-            <button
-              type="button"
-              className="w-10 h-10 rounded-lg bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors"
-              aria-label="GitHub"
-            >
-              <LucideGithub className="w-5 h-5 text-primary" />
-            </button>
           </div>
         </div>
 

@@ -3,15 +3,14 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail } from "lucide-react"
 
 export function Team() {
   const teamMembers = [
     {
       name: "Steve",
-      role: "Team Lead & Cloud Architect",
+      role: "Technical Lead & Cloud Architect",
       description:
-        "Led the team and deployed DeepChessIQ services to Microsoft Azure, ensuring reliable, scalable cloud infrastructure for the entire platform.",
+        "Led technical architecture and deployed DeepChessIQ services to Microsoft Azure, ensuring reliable, scalable cloud infrastructure for the entire platform.",
       image: "/placeholder-user.jpg"
     },
     {
@@ -23,15 +22,15 @@ export function Team() {
     },
     {
       name: "Pavan",
-      role: "Frontend Developer & UX Designer",
-      description: "Creates intuitive user interfaces and seamless user experiences for our chess intelligence platform.",
+      role: "Data Engineer",
+      description: "Designs and implements data pipelines, ETL processes, and data infrastructure to support DeepChessIQ's analytics and machine learning workflows.",
       image: "/placeholder-user.jpg"
     },
     {
       name: "Harninder",
-      role: "Integration & Deployment Engineer",
+      role: "Team Lead & Integration Engineer",
       description:
-        "Owned end-to-end integration of services, wiring frontend, backend, and AI components together and deploying stable builds across environments.",
+        "Led the team and owned end-to-end integration of services, wiring frontend, backend, and AI components together and deploying stable builds across environments.",
       image: "/placeholder-user.jpg"
     },
     {
@@ -93,17 +92,6 @@ export function Team() {
                   <p className="text-sm text-muted-foreground text-pretty leading-relaxed">
                     {member.description}
                   </p>
-                </div>
-                <div className="flex justify-center gap-2 pt-4">
-                  <button className="w-8 h-8 rounded-lg bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors">
-                    <Github className="w-4 h-4 text-primary" />
-                  </button>
-                  <button className="w-8 h-8 rounded-lg bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors">
-                    <Linkedin className="w-4 h-4 text-primary" />
-                  </button>
-                  <button className="w-8 h-8 rounded-lg bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors">
-                    <Mail className="w-4 h-4 text-primary" />
-                  </button>
                 </div>
               </CardContent>
             </Card>
