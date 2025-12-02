@@ -59,7 +59,7 @@ export function Hero() {
           </p>
 
           <p className="text-base text-primary font-medium">
-            Built by Steve, Vamsi, Pavan, Harninder, Aparna, Ethili & Prince
+            Built by Stephen, Vamsi, Pavan, Harninder, Aparna, Ethili & Prince
           </p>
         </div>
 
