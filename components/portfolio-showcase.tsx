@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight, ExternalLink, Github } from "lucide-react"
+import { ChevronLeft, ChevronRight, Github } from "lucide-react"
 
 export function PortfolioShowcase() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -101,10 +101,6 @@ export function PortfolioShowcase() {
                 ))}
               </div>
               <div className="flex gap-3">
-                <Button size="sm" variant="outline" className="glass">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  View Demo
-                </Button>
                 <Button 
                   size="sm" 
                   variant="outline" 

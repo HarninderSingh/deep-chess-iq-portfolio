@@ -27,7 +27,7 @@ export function Resources() {
             return (
               <Card
                 key={i}
-                className="glass p-6 space-y-4 hover:border-primary/50 transition-colors cursor-pointer group"
+                className={`glass p-6 space-y-4 hover:border-primary/50 transition-colors group ${isDocumentation ? 'cursor-pointer' : ''}`}
                 onClick={isDocumentation ? () => window.open('https://docs.google.com/document/d/1Onofcug3l8M8au6vmJY9_VJvptbSR7MTrsjz0HneaOo/edit?usp=sharing', '_blank') : undefined}
               >
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">

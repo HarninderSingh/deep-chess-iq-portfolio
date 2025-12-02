@@ -76,9 +76,6 @@ export function Footer() {
               >
                 Documentation
               </a>
-              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
-                API Reference
-              </a>
               <a 
                 href="https://github.com/AIP-F25-1/DeepChessIQ" 
                 target="_blank" 
@@ -86,9 +83,6 @@ export function Footer() {
                 className="block text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 GitHub Repository
-              </a>
-              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
-                Research Papers
               </a>
             </div>
           </div>
