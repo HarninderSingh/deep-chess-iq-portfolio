@@ -22,20 +22,24 @@ export function Resources() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {resources.map((resource, i) => (
-            <Card
-              key={i}
-              className="glass p-6 space-y-4 hover:border-primary/50 transition-colors cursor-pointer group"
-            >
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <resource.icon className="w-6 h-6 text-primary" />
-              </div>
-              <div className="space-y-1">
-                <h3 className="text-lg font-semibold">{resource.label}</h3>
-                <p className="text-sm text-muted-foreground">{resource.desc}</p>
-              </div>
-            </Card>
-          ))}
+          {resources.map((resource, i) => {
+            const isDocumentation = resource.label === "API Documentation"
+            return (
+              <Card
+                key={i}
+                className="glass p-6 space-y-4 hover:border-primary/50 transition-colors cursor-pointer group"
+                onClick={isDocumentation ? () => window.open('https://docs.google.com/document/d/1Onofcug3l8M8au6vmJY9_VJvptbSR7MTrsjz0HneaOo/edit?usp=sharing', '_blank') : undefined}
+              >
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <resource.icon className="w-6 h-6 text-primary" />
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-lg font-semibold">{resource.label}</h3>
+                  <p className="text-sm text-muted-foreground">{resource.desc}</p>
+                </div>
+              </Card>
+            )
+          })}
         </div>
 
         <Card className="glass p-8 md:p-12 text-center space-y-6">
@@ -46,8 +50,12 @@ export function Resources() {
               {"Get the complete technical design document, architecture diagrams, and implementation strategy"}
             </p>
           </div>
-          <Button size="lg" className="bg-primary hover:bg-primary/90">
-            Request Documentation
+          <Button 
+            size="lg" 
+            className="bg-primary hover:bg-primary/90"
+            onClick={() => window.open('https://docs.google.com/document/d/1Onofcug3l8M8au6vmJY9_VJvptbSR7MTrsjz0HneaOo/edit?usp=sharing', '_blank')}
+          >
+            View Documentation
           </Button>
         </Card>
       </div>

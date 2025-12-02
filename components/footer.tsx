@@ -38,10 +38,10 @@ export function Footer() {
                 Home
               </button>
               <button 
-                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
                 className="block text-sm text-muted-foreground hover:text-primary transition-colors"
               >
-                Services
+                About
               </button>
               <button 
                 onClick={() => document.getElementById('team')?.scrollIntoView({ behavior: 'smooth' })}
@@ -50,10 +50,16 @@ export function Footer() {
                 Team
               </button>
               <button 
-                onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
                 className="block text-sm text-muted-foreground hover:text-primary transition-colors"
               >
-                Portfolio
+                Services
+              </button>
+              <button 
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                Contact
               </button>
             </div>
           </div>
@@ -62,7 +68,12 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Resources</h4>
             <div className="space-y-2">
-              <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href="https://docs.google.com/document/d/1Onofcug3l8M8au6vmJY9_VJvptbSR7MTrsjz0HneaOo/edit?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
                 Documentation
               </a>
               <a href="#" className="block text-sm text-muted-foreground hover:text-primary transition-colors">

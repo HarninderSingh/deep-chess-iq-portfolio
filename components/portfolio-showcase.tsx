@@ -67,7 +67,7 @@ export function PortfolioShowcase() {
   return (
     <section id="portfolio" className="py-20 px-4 bg-muted/5">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center space-y-4 mb-16">
+        <div className="text-center space-y-4 mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-balance">
             Portfolio Showcase
           </h2>
@@ -77,8 +77,8 @@ export function PortfolioShowcase() {
         </div>
 
         {/* Main showcase card */}
-        <div className="relative max-w-4xl mx-auto mb-12">
-          <Card className="glass border-primary/20 overflow-hidden">
+        <div className="relative max-w-4xl mx-auto mb-12 animate-scale-in">
+          <Card className="glass border-primary/20 overflow-hidden transform transition-all duration-500 hover:shadow-xl">
             <div className="relative h-64 md:h-80 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
               <div className="text-center space-y-4">
                 <Badge variant="secondary" className="glass">

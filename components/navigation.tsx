@@ -16,12 +16,12 @@ export function Navigation() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm animate-fade-in">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-primary">DeepChessIQ</h1>
+          <div className="flex-shrink-0 animate-slide-in-left">
+            <h1 className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors cursor-pointer">DeepChessIQ</h1>
           </div>
 
           {/* Desktop Navigation */}
@@ -34,10 +34,10 @@ export function Navigation() {
                 Home
               </button>
               <button
-                onClick={() => scrollToSection('services')}
+                onClick={() => scrollToSection('about')}
                 className="text-muted-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors"
               >
-                Services
+                About
               </button>
               <button
                 onClick={() => scrollToSection('team')}
@@ -46,10 +46,10 @@ export function Navigation() {
                 Team
               </button>
               <button
-                onClick={() => scrollToSection('portfolio')}
+                onClick={() => scrollToSection('services')}
                 className="text-muted-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors"
               >
-                Portfolio
+                Services
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
@@ -95,10 +95,10 @@ export function Navigation() {
                 Home
               </button>
               <button
-                onClick={() => scrollToSection('services')}
+                onClick={() => scrollToSection('about')}
                 className="block w-full text-left px-3 py-2 text-base font-medium text-muted-foreground hover:text-primary transition-colors"
               >
-                Services
+                About
               </button>
               <button
                 onClick={() => scrollToSection('team')}
@@ -107,10 +107,10 @@ export function Navigation() {
                 Team
               </button>
               <button
-                onClick={() => scrollToSection('portfolio')}
+                onClick={() => scrollToSection('services')}
                 className="block w-full text-left px-3 py-2 text-base font-medium text-muted-foreground hover:text-primary transition-colors"
               >
-                Portfolio
+                Services
               </button>
               <button
                 onClick={() => scrollToSection('contact')}

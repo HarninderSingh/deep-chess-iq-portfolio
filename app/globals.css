@@ -4,26 +4,26 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(0.12 0.02 264);
-  --foreground: oklch(0.98 0.01 264);
-  --card: oklch(0.16 0.03 264 / 0.6);
-  --card-foreground: oklch(0.98 0.01 264);
-  --popover: oklch(0.16 0.03 264);
-  --popover-foreground: oklch(0.98 0.01 264);
-  --primary: oklch(0.65 0.25 285);
-  --primary-foreground: oklch(0.98 0.01 264);
-  --secondary: oklch(0.58 0.22 192);
-  --secondary-foreground: oklch(0.98 0.01 264);
-  --muted: oklch(0.24 0.03 264);
-  --muted-foreground: oklch(0.68 0.02 264);
-  --accent: oklch(0.65 0.25 285);
-  --accent-foreground: oklch(0.98 0.01 264);
+  --background: oklch(0.99 0 0);
+  --foreground: oklch(0.15 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0 0);
+  --primary: oklch(0.45 0.2 250);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.95 0.01 0);
+  --secondary-foreground: oklch(0.15 0 0);
+  --muted: oklch(0.96 0.005 0);
+  --muted-foreground: oklch(0.45 0 0);
+  --accent: oklch(0.45 0.2 250);
+  --accent-foreground: oklch(0.99 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.98 0.01 264);
-  --border: oklch(0.28 0.03 264 / 0.3);
-  --input: oklch(0.28 0.03 264);
-  --ring: oklch(0.65 0.25 285);
-  --chart-1: oklch(0.65 0.25 285);
+  --border: oklch(0.9 0.01 0);
+  --input: oklch(0.9 0.01 0);
+  --ring: oklch(0.45 0.2 250);
+  --chart-1: oklch(0.45 0.2 250);
   --chart-2: oklch(0.58 0.22 192);
   --chart-3: oklch(0.72 0.18 165);
   --chart-4: oklch(0.68 0.2 305);
@@ -125,8 +125,8 @@
 
   /* Chess board pattern background */
   .chess-pattern {
-    background-image: linear-gradient(rgba(101, 84, 192, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(101, 84, 192, 0.03) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(69, 90, 100, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(69, 90, 100, 0.02) 1px, transparent 1px);
     background-size: 50px 50px;
   }
 
@@ -136,5 +136,105 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--border);
+  }
+
+  /* Animation utilities */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  /* Stagger animations */
+  .animate-delay-100 {
+    animation-delay: 0.1s;
+    opacity: 0;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 0.2s;
+    opacity: 0;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 0.3s;
+    opacity: 0;
+  }
+
+  .animate-delay-400 {
+    animation-delay: 0.4s;
+    opacity: 0;
+  }
+
+  .animate-delay-500 {
+    animation-delay: 0.5s;
+    opacity: 0;
   }
 }
